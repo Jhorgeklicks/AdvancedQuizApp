@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia Database</title>
+</head>
+<body>
+    <main>
+        <h1>fetching Data</h1>
+        <p id="loading"></p>
+    </main>
+    <script>
+        const holder = document.querySelector("#loading");
+        const fetchQtn = async() => {
+            try{
+                holder.textContent = 'Loading Data';
+                // const data =  await fetch('https://opentdb.com/api.php?amount=5&category=9&difficulty=easy&type=multiple');
+
+                const data =  await fetch('https://opentdb.com/api.php?amount=10&category=18&difficulty=medium');
+
+                const res = await data.json();
+                holder.textContent = 'Data Fetched';
+                console.log(res.results);
+
+            }catch(e){
+                console.log(e);
+                holder.textContent = 'An Error Occured!!';
+            }
+        }
+
+        fetchQtn();
+    </script>
+    
+</body>
+</html>
+

@@ -1,0 +1,31 @@
+    const numbering = ['A','B','C','D'];
+    const onSelectAlph = 'inline-block w-[25px] h-[25px] leading-[25px]  rounded-full bg-section text-light font-bold font-num text-[15px]m-[10px] text-center absolute top-[7px] left-[6px]'
+    const onAlph = 'inline-block w-[25px] h-[25px] leading-[25px]  rounded-full bg-sec-300 text-dark font-bold font-num text-[15px]m-[10px] text-center absolute top-[7px] left-[6px]'
+
+    const onSelectLabel = 'absolute top-0 left-0 z-20 w-full h-full rounded-full bg-sec-600 '
+    const onLabel = 'absolute top-0 left-0 z-20 w-full h-full rounded-full bg-ter-700'
+
+    const onSelectLabelMulti = 'w-full h-full rounded-full flex px-[20px] py-[10px] items-center bg-sec-600 relative z-10'
+    const onLabelMulti = 'w-full h-full rounded-full bg-ter-700 flex px-[20px] py-[10px] items-center relative z-10'
+    
+    const onSelectAlphMulti = 'bg-section inline-block w-[25px] h-[25px] leading-[25px]  rounded-full bg-sec-300 text-dark font-bold font-num text-[14px] mx-[10px] text-center text-light relative z-10'
+    const onAlphMulti = 'inline-block w-[25px] h-[25px] leading-[25px]  rounded-[50%] bg-sec-300 text-dark font-bold font-num text-[14px] mx-[10px] text-center relative z-10'
+    // 
+
+    const d = 'block w-full bg-ter-400 px-[20] py-[10px] rounded-full relative mb-[20px] hover:bg-ter-500';
+    const ds = 'block w-full bg-sec-600 px-[20] py-[10px] rounded-full relative mb-[20px] hover:bg-sec-700 text-light';
+    
+    
+ <div className="w-2/4">
+                        <span className='inline-block relative z-10 h-[40px] m-[4px] w-11/12'>
+                            <input type='radio' className='w-full absolute top-0 left-0 text-[20px] opacity-0 h-full cursor-pointer z-30' name='radio' id='rad' value={options[3]} onClick={onSelectAnswer}/>
+
+                            <label htmlFor="rad" className={selected === options[3]  ? onSelectLabel : onLabel }>  
+
+                            <span className={selected === options[3]  ? onSelectAlph : onAlph }>D</span>  
+
+                                <span className='absolute top-[10px] left-[39px] text-light font-style font-normal text-[16px]'>{options[3]}</span>
+
+                            </label>
+                        </span>
+                     </div>
